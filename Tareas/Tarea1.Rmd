@@ -1,0 +1,85 @@
+---
+title: "Tarea_1"
+author: "Nicolas Duje"
+date: "11/2/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## RESPUESTA 1
+
+```{r}
+seg_min = 60
+seg_hora = seg_min * 60
+seg_dia = seg_hora * 24
+seg_anio = seg_dia * 365
+seg_totales = 250000000
+
+dias_ene = 31 
+dias_feb = 28
+dias_mar = 31
+dias_abr = 30
+dias_may = 31
+dias_jun = 30
+dias_jul = 31
+dias_ago = 31
+dias_sep = 30
+dias_oct = 31
+dias_nov = 30
+dias_dic = 31
+
+
+aniostotales = seg_totales %/% seg_anio
+diasrestantes = (seg_totales %% seg_anio) %/% seg_dia
+diassinbiciesto = diasrestantes - 2 
+horasrestantes = (seg_totales %% seg_dia) %/% seg_hora
+diastotales = dias_ene + dias_feb + dias_mar + dias_abr + dias_may + dias_jun + dias_jul + dias_ago + dias_sep + dias_oct + dias_nov
+print(diastotales)
+
+
+print("La fecha exacta es:")
+print(sprintf("%i de Diciembre del %i a las %ihs", diassinbiciesto-diastotales, 2018+aniostotales, horasrestantes))
+```
+
+## RESPUESTA 2
+```{r}
+A = 2
+B = 4
+c = 0
+resultado = 0
+
+f = function (A, B, C){
+resultado = (C-B)/A
+print (resultado)
+}
+
+r1 = f(5,3,0)
+print(sprintf("Si 5x+3=0 entonces x = %f",r1))
+
+r2 = f(7,4,18)
+print(sprintf("Si 7x+4=18 entonces x = %f", r2))
+
+r3 = f(1,1,1)
+print(sprintf("Si x+1=1 entonces x = %f", r3))
+
+```
+
+## RESPUESTA 3
+```{r}
+x = (3*exp(1))-pi
+print (x,4)
+```
+
+## RESPUESTA 4
+```{r}
+z1=2+3i
+z2=5+8i
+
+modulo = Mod((z1^2)/z2)
+print(modulo,4)
+```
