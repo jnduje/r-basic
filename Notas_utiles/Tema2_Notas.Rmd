@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Fórmulas matemáticas
 
-Para escribir fórmulas matemáticas bien formateadas utilizaremos la sintaxis $\LaTeX$
+Para escribir fórmulas matemáticas bien formateadas utilizaremos la sintaxis \LaTeX
 
    - Para tener ecuaciones o fórmulas en el mismo párrafo, escribimos nuestro código entre dos símbolos de dólar: `$`código`$`
    - Si queremos tener ecuaciones o fórmulas centradas en un párrafo aparte, escribimos nuestro código entre dos dobles símbolos de dólar:  `$$`código`$$`
