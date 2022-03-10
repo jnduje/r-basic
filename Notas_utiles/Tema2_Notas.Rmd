@@ -9,39 +9,30 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 # Fórmulas matemáticas
 
-Para escribir fórmulas matemáticas bien formateadas utilizaremos la sintaxis \(LaTeX\)
+Para escribir fórmulas matemáticas bien formateadas utilizaremos la sintaxis \LaTeX
 
    - Para tener ecuaciones o fórmulas en el mismo párrafo, escribimos nuestro código entre dos símbolos de dólar: `$`código`$`
    - Si queremos tener ecuaciones o fórmulas centradas en un párrafo aparte, escribimos nuestro código entre dos dobles símbolos de dólar:  `$$`código`$$`
 
-# Integrales
 
-$\int_{a}^{b}$
-$\frac{a}{b}$  $x^{3}$  $$x_{3}$$
+## R Markdown
 
-# Chunck
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-Voy a calcular la fórmula $\sqrt(2) - \exp(-2)$
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r MiPrimerChunk, comment=NA, echo = TRUE, eval = TRUE, message=TRUE, warning=TRUE}
-sqrt(2) - exp(-2)
+```{r cars}
+summary(cars)
 ```
 
+## Including Plots
 
+You can also embed plots, for example:
 
-$a \cdot b$
-
-
-$\sqrt[3]{5}$
-
-```{r}
-rep(1989, 10)
-
-vec <- c(16, 0, 1, 20, 1, 7, 88, 5, 1, 9)
-fix(vec)
-vec
+```{r pressure, echo=FALSE}
+plot(pressure)
 ```
 
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
