@@ -1,0 +1,44 @@
+---
+title: "Trabajar con R"
+author: "Nico Duje"
+date: "14/3/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Secuencias
+Secuencia de los 20 primeros números
+```{r}
+1:20
+```
+Secuencia de los 20 primeros números pares $$seq(2, length.out = 20, by = 2)$$
+```{r}
+seq(2, length.out = 20, by = 2)
+
+```
+
+Secuencia de 30 número entre el 17 y el 98 de 4 cifras significativas
+```{r}
+round( seq(17.00, 98.00, length.out = 30), 4)
+```
+Combinar la función $sort(x)$ y $rev(x)$
+```{r}
+
+x <- c(1, 4, 6, 8, 60, 34, 29)
+y <- sort (x)
+rev (y)
+
+rev(sort(x))
+
+```
+Parámetros dentro de la función $sort(x)$ para devovler el vector ordenado pero de forma inversa (decreciente)
+
+```{r}
+x <- c(1, 4, 6, 8, 60, 34, 29)
+sort (x, decreasing = TRUE)
+```
+
