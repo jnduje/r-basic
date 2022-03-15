@@ -1,0 +1,20 @@
+---
+title: "Prueba"
+author: "Nicolas Duje"
+date: "10/3/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Integrales 
+
+Vamos a crear $\sqrt{2} - \exp{-2}$
+
+```{r}
+sqrt(2) - exp(-2)
+```
+
+$\int_{a}^{b}$
