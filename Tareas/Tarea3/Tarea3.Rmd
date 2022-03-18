@@ -1,0 +1,75 @@
+---
+title: "Tarea 3"
+author: "Nicolas Duje"
+date: "18/3/2022"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Preguntas de esta Tarea
+
+### Pregunta 1
+
+Crea un vector llamado Harry formado por la sucesión de números consecutivos entre el -10 y 27. Pídele a R que devuelva el elemento de índice 7. Escribe el resultado.
+
+```{r, comment=NA}
+Harry = c(-10:27)
+Harry[7]
+
+```
+
+### Pregunta 2
+Da el máximo de la sucesión $100\cdot 2^n -7\cdot3^n$ con $n=0,\dots,200$.
+
+```{r, comment=NA}
+n = seq(0, 200, by = 1)
+
+funcion = function(x){100*2^x - 7*3^x}
+
+vec = sapply(n, funcion)
+max(vec)
+
+```
+
+
+### Pregunta 3
+Crea la sucesión de números consecutivos entre 0 y 40. A continuación, crea el vector 3 · 5n − 1 con
+n = 0, . . . , 40. Ponle como nombre x. Ahora, da el subvector de los elementos que son estrictamente mayores
+a 3.5.
+```{r, message=FALSE, comment=NA}
+suc = seq(0, 40, by=1)
+x = sapply (suc, FUN = function(x){(3*5*x)-1}) 
+x[x > 3.5]
+```
+
+### Pregunta 4
+Crea una función que devuelva la parte real, la imaginaria, el módulo, el argumento y el conjugado de un
+número, mostrando solo 2 cifras significativas.
+RECOMENDACIÓN: En algún momento hará falta utilizar vectores
+
+```{r, message=FALSE, comment=NA}
+
+fun = function(z){
+  real = Re(z)
+  img = Im(z)
+  mod = Mod(z)
+  ar = Arg(z)
+  con = Conj(z)
+  
+  vec = c(real, img, mod, ar, con)
+  return = sapply(vec, FUN = fixed(c, digits = 2))
+}
+
+z1 = fun(5i)
+
+z1
+
+R
+```
+
+
