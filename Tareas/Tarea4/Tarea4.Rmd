@@ -1,0 +1,105 @@
+---
+title: "Tarea 4"
+author: "Nicolas Duje"
+date: "26/3/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Pregunta 1
+
+Realiza los siguientes productos de matrices siguiente en \R\ donde: $$A = \begin{pmatrix} 1 & 2 & 3 & 4\\ 4 & 3 & 2 & 1\\ 0 & 1 & 0 & 2\\ 3 & 0 & 4 & 0\end{pmatrix} $$ $$B = \begin{pmatrix} 4&3&2&1\\0&3&0&4\\1&2&3&4\\0&1&0&2\end{pmatrix} $$
+
+```{r Pregunta 1, message=FALSE, comment=NA}
+
+A <- matrix(c(1, 2, 3, 4, 4, 3, 2, 1, 0, 1, 0, 2, 3, 0, 4, 0), nrow = 4, byrow = TRUE)
+B <- matrix(c(4, 3, 2, 1, 0, 3, 0, 4, 1, 2, 3, 4, 0, 1, 0, 2), nrow = 4, byrow = TRUE)
+
+```
+$A·B$
+```{r A*B, message=FALSE, comment=NA}
+A*B
+```
+$B.A$ 
+```{r B*A, message=FALSE, comment=NA}
+B*A
+
+```
+$(A·B)^t$
+
+```{r (A·B)^t, message=FALSE, comment=NA}
+t(A*B)
+
+```
+
+$B^t·A$ 
+```{r B^ t·A, message=FALSE, comment=NA}
+t(B)*A
+
+```
+
+$(A·B)^{-1}$
+```{r (A·B)^−1, message=FALSE, comment=NA}
+round((A*B)**-1, 3)
+
+```
+$A^{−1}·B^t$
+```{r A^−1·B^t, message=FALSE, comment=NA}
+round((A**-1)*t(B), 3)
+
+```
+
+### Pregunta 2
+Considera en un vector los números de tu DNI (puedes inventártelos) y llámalo dni. Por ejemplo, si tu DNI
+es 54201567K, tu vector será: $$ dni = (5, 4, 2, 0, 1, 5, 6, 7) $$
+Define el vector en R. Calcula con R el vector dni al cuadrado, la raíz cuadrada del vector dni y, por último,
+la suma de todas las cifras del vector dni.
+
+Redacta todos tus resultados y utiliza LaTeX cuando pertoque.
+
+$dni$
+```{r DNI, message=FALSE, comment=NA}
+dni <- c(5, 4, 2, 0, 1, 5, 6, 7)
+dni
+```
+$dni^2$
+
+```{r}
+round(dni**2, 3)
+```
+
+$\sqrt{dni}$ 
+```{r} 
+round(sqrt(dni), 3)
+```
+
+La suma de todos sus valores
+```{r} 
+sum(dni) 
+```
+### Pregunta 3
+
+Considera el vector de las letras de tu nombre y apellido. Llámalo name. Por ejemplo, $$name = (M, A, R, I, A, S, A, N, T, O, S)$$ Define dicho vector en R. Calcula el subvector que solo contenga tu nombre. Calcula también el subvector
+que contenga solo tu apellido. Ordénalo alfabéticamente. Crea una matriz con este vector.
+
+Redacta todos tus resultados y utiliza LATEX cuando pertoque.
+
+```{r}
+name <- c("N","I","C","O","L","A","S","D","U","J","E")
+nombre = name[1:7]
+nombre
+
+apellido = name[8:11]
+sort(apellido)
+
+M = matrix(apellido, nrow = 2, byrow = TRUE)
+M
+```
+
+
+
+
+
